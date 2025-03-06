@@ -4,14 +4,14 @@ services:
   high-link-front:
     # Build the Docker image using the Dockerfile in the current directory
     build:
-      context: .
-      dockerfile: ./front/Dockerfile
+      context: ./front
+      dockerfile: Dockerfile
     # Expose the Nuxt.js development port
     ports:
       - "3000:3000"
     # Mount the current directory to the container for hot reloading
     volumes:
-      - .:/app
+      - ./front:/app
       - /app/node_modules
       - /app/.nuxt
     # Set the working directory in the container
@@ -33,7 +33,7 @@ services:
   #   ports:
   #     - "4000:4000"
   #   volumes:
-  #     - .:/app
+  #     - ./back:/app
   #     - /app/node_modules
   #   working_dir: /app
   #   environment:
