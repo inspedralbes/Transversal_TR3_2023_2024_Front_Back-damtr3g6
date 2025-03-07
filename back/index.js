@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import { testSequelizeConnection } from './database.js';
 
 const app = express();
 const port = 4000;
@@ -8,8 +7,6 @@ const port = 4000;
 // Enable CORS
 app.use(cors());
 
-// Test the Sequelize connection
-testSequelizeConnection();
 
 // Basic route
 app.get('/', (req, res) => {

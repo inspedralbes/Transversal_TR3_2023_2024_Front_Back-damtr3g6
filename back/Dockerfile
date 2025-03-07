@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 4000
 
 # Start the application with nodemon
-CMD ["nodemon", "index.js", "-L"]
+CMD ["npm", "run", "dev"]
