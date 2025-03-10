@@ -38,6 +38,8 @@ services:
     working_dir: /app
     environment:
       - NODE_ENV=development
+    env_file:
+      - .env
     restart: unless-stopped
     networks:
       - high-link-network
